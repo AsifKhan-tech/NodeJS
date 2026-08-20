@@ -2,15 +2,12 @@ import os from "node:os";
 
 /**
  * Build a system moniter
+ * Take a snapshot
+ * Take another snapshot after a second
  */
 
 function moniter() {
-  // Take a snapshot
-  //Take another snapshot after a second
-
   const oldCpus = os.cpus();
-
-  //   console.log("old:", oldCpus);
 
   setTimeout(() => {
     const newCpus = os.cpus();
@@ -23,6 +20,11 @@ function moniter() {
 
     console.clear();
     console.table(usage);
+
+    const usedMemory = (os.totalmem() - os.freemem()) / (1024 * 1024 * 1024);
+
+    console.log(`
+      Memory used: ${usedMemory.toFixed(2)} GB / ${(os.totalmem() / (1024 * 1024 * 1024)).toFixed(2)} GB`);
   }, 1000);
 }
 
@@ -35,28 +37,4 @@ function calculateCpu(oldCpus, newCpus) {
 
   return ((100 * used) / total).toFixed(1);
 }
-
 setInterval(moniter, 1000);
-
-// [
-//   {
-//     model: "Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz",
-//     speed: 2000,
-//     times: { user: 1013440, nice: 3600, sys: 256940, idle: 1912430, irq: 0 },
-//   },
-//   {
-//     model: "Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz",
-//     speed: 2000,
-//     times: { user: 1025100, nice: 3430, sys: 257950, idle: 1901620, irq: 0 },
-//   },
-//   {
-//     model: "Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz",
-//     speed: 2000,
-//     times: { user: 1013180, nice: 3140, sys: 260090, idle: 1913450, irq: 0 },
-//   },
-//   {
-//     model: "Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz",
-//     speed: 1999,
-//     times: { user: 965690, nice: 2610, sys: 268060, idle: 1919310, irq: 0 },
-//   },
-// ];
