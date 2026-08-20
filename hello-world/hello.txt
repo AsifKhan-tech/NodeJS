@@ -1,0 +1,2 @@
+Create file synchronously!
+Hello Node.js
