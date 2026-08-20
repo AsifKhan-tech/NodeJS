@@ -1,5 +1,7 @@
 import os from "node:os";
 
+import chalk from "chalk";
+
 /**
  * Build a system moniter
  * Take a snapshot
@@ -19,12 +21,24 @@ function moniter() {
     });
 
     console.clear();
+    console.log(chalk.magenta(`=======System status=======`));
     console.table(usage);
 
     const usedMemory = (os.totalmem() - os.freemem()) / (1024 * 1024 * 1024);
 
-    console.log(`
-      Memory used: ${usedMemory.toFixed(2)} GB / ${(os.totalmem() / (1024 * 1024 * 1024)).toFixed(2)} GB`);
+    console.log(
+      "Memory used:",
+      usedMemory > 1 && usedMemory <= 5
+        ? chalk.greenBright(
+            `${usedMemory.toFixed(2)} GB / ${(os.totalmem() / (1024 * 1024 * 1024)).toFixed(2)} GB`,
+          )
+        : chalk.red(
+            `${usedMemory.toFixed(2)} GB / ${(os.totalmem() / (1024 * 1024 * 1024)).toFixed(2)} GB`,
+          ),
+    );
+
+    // console.log(`
+    //   Memory used: ${usedMemory.toFixed(2)} GB / ${(os.totalmem() / (1024 * 1024 * 1024)).toFixed(2)} GB`);
   }, 1000);
 }
 
