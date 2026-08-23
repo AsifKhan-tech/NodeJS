@@ -9,10 +9,12 @@ async function deleteFolder(folderpath) {
   }
 }
 
-async function createFolder(folderName) {
-  await fs.mkdir(folderName, { recursive: true });
-
-  console.log("Folders created recursively");
+export async function createFolder(folderName) {
+  try {
+    await fs.mkdir(folderName, { recursive: true });
+  } catch (error) {
+    console.log("Error", error);
+  }
 }
 
 async function deleteFile(filepath) {
@@ -28,13 +30,26 @@ async function writeToFile(pathname, content = "") {
   await fs.appendFile(pathname, content);
 }
 
-async function createFile(pathname, content = "") {
+export async function createFile(pathname, content = "") {
   await fs.writeFile(pathname, content);
 }
-deleteFolder("./contents");
+
+async function getFileInfo(filepath) {
+  const stats = await fs.stat(filepath);
+
+  return {
+    size: `${(stats.size / 1025).toFixed(2)} KB`,
+    created: stats.birthtime.toLocaleString(),
+    modified: stats.mtime.toLocaleString(),
+  };
+}
+
+// createFolder("./contents/assets/images");
+// deleteFolder("./contents");
+// createFile("./hola.txt", "Hello NodeJS!\n");
 // deleteFile("./hello.txt");
 // readFile("./hello.txt");
-// createFolder("./contents/assets/images");
+// getFileInfo("./hola.txt").then((data) => console.log(data));
 
 // function createFile(pathname) {
 //Sync API
