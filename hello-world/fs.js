@@ -18,30 +18,50 @@ export async function createFolder(folderName) {
 }
 
 async function deleteFile(filepath) {
-  await fs.unlink(filepath);
+  try {
+    await fs.unlink(filepath);
+  } catch (error) {
+    console.log("Error: ", error);
+  }
 }
 
 async function readFile(filepath) {
-  const data = await fs.readFile(filepath, "utf-8");
-  console.log("Data", data);
+  try {
+    const data = await fs.readFile(filepath, "utf-8");
+    console.log("Data", data);
+  } catch (error) {
+    console.log("Error: ", error);
+  }
 }
 
-async function writeToFile(pathname, content = "") {
-  await fs.appendFile(pathname, content);
+export async function writeToFile(pathname, content = "") {
+  try {
+    await fs.appendFile(pathname, content);
+  } catch (error) {
+    console.log("Error: ", error);
+  }
 }
 
 export async function createFile(pathname, content = "") {
-  await fs.writeFile(pathname, content);
+  try {
+    await fs.writeFile(pathname, content);
+  } catch (error) {
+    console.log("Error: ", error);
+  }
 }
 
 async function getFileInfo(filepath) {
-  const stats = await fs.stat(filepath);
+  try {
+    const stats = await fs.stat(filepath);
 
-  return {
-    size: `${(stats.size / 1025).toFixed(2)} KB`,
-    created: stats.birthtime.toLocaleString(),
-    modified: stats.mtime.toLocaleString(),
-  };
+    return {
+      size: `${(stats.size / 1025).toFixed(2)} KB`,
+      created: stats.birthtime.toLocaleString(),
+      modified: stats.mtime.toLocaleString(),
+    };
+  } catch (error) {
+    console.log("Error: ", error);
+  }
 }
 
 // createFolder("./contents/assets/images");

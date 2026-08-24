@@ -1,7 +1,7 @@
 import * as readline from "node:readline/promises";
 import { stdin, stdout } from "node:process";
 
-import { createFolder, createFile } from "./fs.js";
+import { createFolder, createFile, writeToFile } from "./fs.js";
 
 import chalk from "chalk";
 
@@ -11,20 +11,20 @@ const rl = readline.createInterface({
 });
 
 async function menu() {
-  console.log(chalk.magentaBright.bold(`\n File System Manager\n`));
+  console.log(chalk.blue.bold(`\n📂 File System Manager\n`));
 
   const options = [
     "Create Folder",
-    "Delete Folder",
     "Create File",
     "Write to File",
     "Delete File",
+    "Delete Folder",
     "List Items",
     "Exit",
   ];
 
   options.forEach((opt, i) =>
-    console.log(chalk.yellow(`${i + 1}`) + chalk.white(`: ${opt}`)),
+    console.log(chalk.green(`${i + 1}`) + chalk.white(` ${opt}`)),
   );
 
   try {
@@ -35,7 +35,7 @@ async function menu() {
         const folderPath = await rl.question(chalk.cyan("Folder path: "));
         await createFolder(folderPath);
 
-        console.log(chalk.greenBright(`Folder created!`));
+        console.log(chalk.green(`✅️ Folder created!`));
         break;
 
       case "2":
@@ -43,9 +43,17 @@ async function menu() {
         const initialContent = await rl.question(
           chalk.cyan("Initial content: "),
         );
-        await createFile(filepath, initialContent);
+        await createFile(filepath, `${initialContent}\n`);
 
-        console.log(chalk.greenBright(`File created!`));
+        console.log(chalk.green(`✅️ File created!`));
+        break;
+
+      case "3":
+        const appendFilepath = await rl.question(chalk.cyan("File path: "));
+        const appendContent = await rl.question(chalk.cyan("Content: "));
+        await writeToFile(appendFilepath, `\n ${appendContent}`);
+
+        console.log(chalk.green(`✅️ Content added to file!`));
         break;
 
       default:
