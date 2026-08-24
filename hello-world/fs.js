@@ -1,7 +1,24 @@
 // import * as fs from "node:fs";
 import * as fs from "node:fs/promises";
+import path from "node:path";
 
-async function deleteFolder(folderpath) {
+export async function listItems(listPath = "./") {
+  try {
+    const items = await fs.readdir(listPath, { withFileTypes: true });
+
+    return items.map((item) => {
+      return {
+        name: item.name,
+        type: item.isDirectory() ? "Folder" : "File",
+        path: path.join(import.meta.dirname, item.name),
+      };
+    });
+  } catch (error) {
+    console.log("Error: ", error);
+  }
+}
+
+export async function deleteFolder(folderpath) {
   try {
     await fs.rm(folderpath, { recursive: true });
   } catch (error) {
@@ -17,7 +34,7 @@ export async function createFolder(folderName) {
   }
 }
 
-async function deleteFile(filepath) {
+export async function deleteFile(filepath) {
   try {
     await fs.unlink(filepath);
   } catch (error) {

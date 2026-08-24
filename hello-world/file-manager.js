@@ -1,7 +1,14 @@
 import * as readline from "node:readline/promises";
 import { stdin, stdout } from "node:process";
 
-import { createFolder, createFile, writeToFile } from "./fs.js";
+import {
+  createFolder,
+  createFile,
+  writeToFile,
+  deleteFile,
+  deleteFolder,
+  listItems,
+} from "./fs.js";
 
 import chalk from "chalk";
 
@@ -55,9 +62,41 @@ async function menu() {
 
         console.log(chalk.green(`✅️ Content added to file!`));
         break;
+      case "4":
+        const deleteFilePath = await rl.question(
+          chalk.cyan("File to delete: "),
+        );
+        await deleteFile(deleteFilePath);
 
-      default:
+        console.log(chalk.green(`✅️ File deleted!`));
         break;
+
+      case "5":
+        const deleteFolderPath = await rl.question(
+          chalk.cyan("Folder to delete: "),
+        );
+        await deleteFolder(deleteFolderPath);
+
+        console.log(chalk.green(`✅️ Folder deleted!`));
+        break;
+
+      case "6":
+        const listFolderPath = await rl.question(
+          chalk.cyan("Folder path (Enter for current) "),
+        );
+        const items = await listItems(listFolderPath || "./");
+
+        console.log(chalk.bold.greenBright(`\n Contents:`));
+
+        items.forEach((item) => {
+          const icon = item.type === "Folder" ? "📂" : "📄";
+          console.log(`${icon} ${chalk.yellow(item.name)}`);
+        });
+        break;
+
+      case "7":
+        rl.close();
+        return;
     }
   } catch (error) {
     console.log("Error:", error);
