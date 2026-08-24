@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+//shebang
+
 import * as readline from "node:readline/promises";
 import { stdin, stdout } from "node:process";
 
@@ -18,6 +21,7 @@ const rl = readline.createInterface({
 });
 
 async function menu() {
+  console.clear();
   console.log(chalk.blue.bold(`\n📂 File System Manager\n`));
 
   const options = [
@@ -98,6 +102,9 @@ async function menu() {
         rl.close();
         return;
     }
+
+    await rl.question(chalk.gray("\n Press Enter to continue..."));
+    menu();
   } catch (error) {
     console.log("Error:", error);
   }

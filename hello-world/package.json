@@ -7,6 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "fmanager": "./file-manager.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
