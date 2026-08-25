@@ -1,0 +1,18 @@
+[
+  {
+    "name": "HotStar subscription",
+    "expense": 799
+  },
+  {
+    "name": "SonyLIV subscription",
+    "expense": 899
+  },
+  {
+    "name": "Prime subscription",
+    "expense": 1499
+  },
+  {
+    "name": "Take a trip",
+    "expense": 2999
+  }
+]
