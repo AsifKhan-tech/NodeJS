@@ -1,4 +1,4 @@
-import http from "node:http";
+import * as http from "node:http";
 
 const server = http.createServer((req, res) => {
   res.end("NodeJS server");
