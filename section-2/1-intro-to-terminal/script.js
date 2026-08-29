@@ -14,6 +14,12 @@ console.log("Start backend journey!");
  * whoami - give the current user of the system
  * cd - change directory
  * ls - list the content
+ * touch - create one or more files together. touch <filename>
+ * mkdir - create one or more directories / folder together. mkdir <directory_name>
+ * cp - copy one or more files together. cp <filename> <destination_name>
+ * mv - move one or more files together. mv <filename> <destination_name>
+ * mv - rename file. mv <filename> <rename_file>
+ * rm - delete one or more files completely together. rm <filename>
 
  *
  */
