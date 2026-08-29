@@ -2,6 +2,10 @@
 
 console.log("Start backend journey!");
 
+function add(num1, num2) {
+  return num1 + num2;
+}
+
 /**
  * create variables in terminal like this- name="Asif"
  * Access these variables in terminal like this- $name, return the value of name
@@ -20,6 +24,12 @@ console.log("Start backend journey!");
  * mv - move one or more files together. mv <filename> <destination_name>
  * mv - rename file. mv <filename> <rename_file>
  * rm - delete one or more files completely together. rm <filename>
+ * rmdir - delete an empty folder. rmdir <folder_name>
+ * rm -r <folder> - delete folder recursively.
+ * cat - read the file's content
+ * edit any file - using vim and nano
+ *                 nano script.js - open file in nano editor
+ *                ^(ctrl)x(character) to do perform operation like exit file
 
  *
  */
