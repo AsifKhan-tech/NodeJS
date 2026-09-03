@@ -1,3 +1,7 @@
+import { exec } from "node:child_process";
+
+exec(`test="Node.js"`);
+
 const environmentVariable = process.env;
 console.log(`Environment Variable: ${environmentVariable}`);
 
