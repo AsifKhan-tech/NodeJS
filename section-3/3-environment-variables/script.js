@@ -13,8 +13,13 @@
 
 // exec(`test="Node.js set from code"`);
 
-const environmentVariable = process.env.PATH;
-console.log("Environment Variable: ", environmentVariable);
+// const environmentVariable = process.env.PATH;
+// console.log("Environment Variable: ", environmentVariable);
+
+import * as fs from "node:fs";
+
+const fileContent = fs.readFileSync("./.env");
+console.log(fileContent.toString());
 
 /**
  * Environment variables :- It's a pair of key and value pairs of strings that are used to configure the behavior of applications and services. They are typically set outside of the application code and can be accessed by the application at runtime. Environment variables can be used to store sensitive information, such as API keys or database credentials, as well as configuration settings that may vary between different environments (e.g., development, testing, production).
