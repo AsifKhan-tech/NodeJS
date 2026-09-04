@@ -13,7 +13,7 @@
 
 // exec(`test="Node.js set from code"`);
 
-const environmentVariable = process.env;
+const environmentVariable = process.env.PATH;
 console.log("Environment Variable: ", environmentVariable);
 
 /**
