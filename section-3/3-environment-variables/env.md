@@ -32,7 +32,7 @@ For example, when I type:
 ls
 
 If you want to see specific path of command, type
-which <command_name>, which ls, which mkdir etc.
+**which <command_name>**, `which ls`, `which mkdir` etc.
 
 | Command    | What it looks for                                                      | What it found for you |
 | ---------- | ---------------------------------------------------------------------- | --------------------- |
