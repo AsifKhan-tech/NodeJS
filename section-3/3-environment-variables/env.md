@@ -1,6 +1,6 @@
 # Environment Variable
 
-An **environment variable** is a value that is set from `outside` the program. The purpose of environment variables is to be able to `change your program functionality` without having to rebuild and/or redeploy the program.
+An **environment variable** is a value that is set from `outside` the program. The purpose of **environment variables** is to be able to `change your program functionality` without having to rebuild and/or redeploy the program.
 
 ---
 
@@ -40,3 +40,18 @@ If you want to see specific path of command, type
 | whereis ls | The program file, its source code (if available), and its manual page. | /usr/bin/ls           |
 
                                                         (program)/usr/share/man/man1/ls.1.gz (manual)
+
+### File system in Linux
+
+Unlike Windows, where files are organized under different drive letters like `C:` or `D:`, Linux uses a **single hierarchical tree structure** that starts at the **root** directory `/`. Everything, **files**, **directories**, **devices**, and even **temporary system information**, is part of this tree.
+
+_Understanding the Linux file system helps you:_
+
+- **Navigate more efficiently** through the command line
+- **Secure systems properly** by knowing who has access to what
+- **Troubleshoot errors faster** by interpreting logs and paths
+- **Avoid critical mistakes**, like deleting system files or misconfiguring user permissions
+
+#### What Is a File System?
+
+A **file system** is the program so an **operating system** uses it to **organize**, **store**, **retrieve**, and manage data on a storage device, like a **hard disk, SSD, or USB drive**.
