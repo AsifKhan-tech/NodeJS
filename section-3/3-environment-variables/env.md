@@ -41,6 +41,8 @@ If you want to see specific path of command, type
 
                                                         (program)/usr/share/man/man1/ls.1.gz (manual)
 
+---
+
 ### File system in Linux
 
 Unlike Windows, where files are organized under different drive letters like `C:` or `D:`, Linux uses a **single hierarchical tree structure** that starts at the **root** directory `/`. Everything, **files**, **directories**, **devices**, and even **temporary system information**, is part of this tree.
@@ -52,6 +54,26 @@ _Understanding the Linux file system helps you:_
 - **Troubleshoot errors faster** by interpreting logs and paths
 - **Avoid critical mistakes**, like deleting system files or misconfiguring user permissions
 
-#### What Is a File System?
+### What Is a File System?
 
 A **file system** is the program so an **operating system** uses it to **organize**, **store**, **retrieve**, and manage data on a storage device, like a **hard disk, SSD, or USB drive**.
+
+At its core, the **file system** acts like a **digital filing cabinet**. It keeps track of:
+
+- File names
+- Directory structures
+- Metadata (such as permissions and timestamps)
+- The actual physical location of file data on disk
+
+### The Linux Filesystem Hierarchy
+
+The **Linux filesystem** is organized in a hierarchical structure, starting from the **root directory** `/`, which acts as the parent for all other files and directories.
+This organization ensures logical grouping of **system files**, **user data**, and **application binaries**. Here’s a breakdown of some of the most critical directories:
+
+`/ (root) `:- The **top-most directory**. Every other file and directory **stems(starts)** from here. It’s the **base** of the **file system**.
+
+`/bin`:- Short for **“binaries”**. This contains essential user commands such as `ls`, `cp`, `mv`, and `rm`, which are required for **system boot and repair**.
+
+`/boot`:- Houses(necessary) the files needed for **booting** the Linux OS, like the **Linux kernel** `(vmlinuz)`, and **bootloader configurations** like `GRUB`.
+
+`/dev`:- Contains device files. These are not **actual files** but **interfaces** to system devices like **hard drives (/dev/sda)**, **USB devices**, and **virtual devices**.
