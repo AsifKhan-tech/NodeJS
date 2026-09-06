@@ -47,7 +47,7 @@ If you want to see specific path of command, type
 
 Unlike Windows, where files are organized under different drive letters like `C:` or `D:`, Linux uses a **single hierarchical tree structure** that starts at the **root** directory `/`. Everything, **files**, **directories**, **devices**, and even **temporary system information**, is part of this tree.
 
-_Understanding the Linux file system helps you:_
+> Understanding the Linux file system helps you:
 
 - **Navigate more efficiently** through the command line
 - **Secure systems properly** by knowing who has access to what
@@ -57,6 +57,10 @@ _Understanding the Linux file system helps you:_
 ### What Is a File System?
 
 A **file system** is the program so an **operating system** uses it to **organize**, **store**, **retrieve**, and manage data on a storage device, like a **hard disk, SSD, or USB drive**.
+
+> It's running directly inside the core software known as the **kernal**.
+
+![File System](../../../../Danger-Zone/ChaiCode/1.jpg)
 
 At its core, the **file system** acts like a **digital filing cabinet**. It keeps track of:
 
@@ -70,10 +74,16 @@ At its core, the **file system** acts like a **digital filing cabinet**. It keep
 The **Linux filesystem** is organized in a hierarchical structure, starting from the **root directory** `/`, which acts as the parent for all other files and directories.
 This organization ensures logical grouping of **system files**, **user data**, and **application binaries**. Here’s a breakdown of some of the most critical directories:
 
-`/ (root) `:- The **top-most directory**. Every other file and directory **stems(starts)** from here. It’s the **base** of the **file system**.
+`/`:- The **top-most directory**. Every other file and directory **stems(starts)** from here. It’s the **base** of the **file system**.
 
 `/bin`:- Short for **“binaries”**. This contains essential user commands such as `ls`, `cp`, `mv`, and `rm`, which are required for **system boot and repair**.
 
 `/boot`:- Houses(necessary) the files needed for **booting** the Linux OS, like the **Linux kernel** `(vmlinuz)`, and **bootloader configurations** like `GRUB`.
 
 `/dev`:- Contains device files. These are not **actual files** but **interfaces** to system devices like **hard drives (/dev/sda)**, **USB devices**, and **virtual devices**.
+
+### Symbolic links
+
+A **symbolic link** (also known as a **symlink** or **soft link**) is a special type of **file** that points to another **file** or **directory**.
+
+Instead of **duplicating** the **original file data**, it merely (just only) **stores the path** to the target object.
