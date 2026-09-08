@@ -115,3 +115,5 @@ multiple commands can be said script
 > If you know the **path** of the **executable** file, it can run from anywhere in the system.
 
 **_Normal script files exeute in the `bash`_**
+
+> There is every command inside `bin` directory
