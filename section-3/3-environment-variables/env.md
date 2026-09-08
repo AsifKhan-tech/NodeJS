@@ -87,3 +87,21 @@ This organization ensures logical grouping of **system files**, **user data**, a
 A **symbolic link** (also known as a **symlink** or **soft link**) is a special type of **file** that points to another **file** or **directory**.
 
 Instead of **duplicating** the **original file data**, it merely (just only) **stores the path** to the target object.
+
+#### Executable files
+
+> It is a type of computer file that contains a **program** or a specific set of **encoded** instructions, typically in **machine code**, which a computer's **operating system** and **CPU** can directly execute.
+
+When an **user** or **system** initiates this file, it **triggers** a **_program_** to run or a specific operation to occur.
+
+While the `.exe` extension is the most widely recognized for **executable files**, particularly on **_Microsoft Windows systems_**, **numerous(many)** other file formats also serve as **executables** across different **operating systems**.
+
+##### Types of executable files
+
+There are two types of executable files:- **script** and **binary** executable files.
+
+- **Data Files (.txt, .jpg, .pdf)**: These are passive and require a separate application to interpret their content.
+
+- **Script Files (.bat, .py, .sh)**: These require an interpreter (like Python or Bash) to translate commands into machine code, rather than being directly understood by the CPU.
+
+- **Executable Files**: These contain low-level binary instructions the CPU can act upon immediately.
