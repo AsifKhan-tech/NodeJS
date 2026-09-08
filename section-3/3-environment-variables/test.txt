@@ -1,0 +1,6 @@
+ls -l
+
+node -v
+npm -v
+git -v
+pnpm -v
