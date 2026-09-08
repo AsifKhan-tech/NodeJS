@@ -106,4 +106,8 @@ There are two types of executable files:- **script** and **binary** executable f
 
 - **Executable Files**: These contain low-level binary instructions the CPU can act upon immediately.
 
-> If a command is written in text file, runnig this file executes that command
+> If a **command** is written in text file **treated as script**, runnig this file, it executes that **command** if they (file) is **permitted**
+
+```sh
+multiple commands can be said script
+```
