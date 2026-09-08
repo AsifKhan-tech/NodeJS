@@ -105,3 +105,5 @@ There are two types of executable files:- **script** and **binary** executable f
 - **Script Files (.bat, .py, .sh)**: These require an interpreter (like Python or Bash) to translate commands into machine code, rather than being directly understood by the CPU.
 
 - **Executable Files**: These contain low-level binary instructions the CPU can act upon immediately.
+
+> If a command is written in text file, runnig this file executes that command
