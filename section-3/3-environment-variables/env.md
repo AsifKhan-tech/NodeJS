@@ -111,3 +111,7 @@ There are two types of executable files:- **script** and **binary** executable f
 ```sh
 multiple commands can be said script
 ```
+
+> If you know the **path** of the **executable** file, it can run from anywhere in the system.
+
+**_Normal script files exeute in the `bash`_**
