@@ -1,5 +1,7 @@
 ### See running processes in linux (static snapshot)
 
+---
+
 - **Run the following command in terminal**
 
 ```bash
@@ -18,6 +20,18 @@ ps aux
 
 ```bash
  top
+```
+
+- **how to know docker is running or not**?
+
+```bash
+systemctl status docker or (docker.service)
+```
+
+- **if you know the process name, do**
+
+```bash
+ps aux | grep dockerd
 ```
 
 # Environment Variable
