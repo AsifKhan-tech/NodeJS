@@ -1,3 +1,25 @@
+### See running processes in linux (static snapshot)
+
+- **Run the following command in terminal**
+
+```bash
+ps
+```
+
+- **See a detailed list of running processes in the system**
+  - Run the following command
+
+```bash
+ps aux
+```
+
+- **See how processes change over time**
+  - Run the following command
+
+```bash
+ top
+```
+
 # Environment Variable
 
 An **environment variable** is a value that is set from `outside` the program. The purpose of **environment variables** is to be able to `change your program functionality` without having to rebuild and/or redeploy the program.
