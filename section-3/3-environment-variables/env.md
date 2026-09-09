@@ -46,6 +46,24 @@ sudo systemctl disable docker.service docker.socket
 systemctl is-enabled docker.service docker.socket
 ```
 
+- **Enable Docker on Boot**
+
+```bash
+sudo systemctl enable docker.service docker.socket
+```
+
+- **verify**
+
+```bash
+systemctl is-enabled docker.service docker.socket
+```
+
+- **Run docker only for active session**
+
+```bash
+systemctl start docker
+```
+
 # Environment Variable
 
 An **environment variable** is a value that is set from `outside` the program. The purpose of **environment variables** is to be able to `change your program functionality` without having to rebuild and/or redeploy the program.
