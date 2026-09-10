@@ -2,9 +2,9 @@
 
 ## Types of permissions
 
-- 1. Read
-- 2. Write
-- 3. Execute
+- Read
+- Write
+- Execute
 
 > When create a directory, the computer **allocates** `4KB` space in memory.
 
@@ -32,3 +32,15 @@
 4. **-x** : (Execute)
 
 ![File Permissions](./file-permission.png)
+
+**Grant permission to the file / directory**
+
+`chmod +x app.js`
+
+> `+` : To grant permission `x` : execute permission
+
+**Remove permission to the file / directory**
+
+`chmod -w file.sh`
+
+> `-` : To remove permission `w` : write permission
