@@ -11,6 +11,15 @@
 > When we create an user in `UNIX` **operating system**, along with that a group is also created.
 
 ```bash
+-rwxrwxr-x 1 asifkhan asifkhan 25 Sep 10 23:27 index.ts
+```
+
+1. **-** : file / **d** : directory
+2. **rwx** : These permissions for current user in the given group (Read, Write, and Execute)
+3. **rwx** : These permissions for the user that is in the user's group(Read, Write, and Execute)
+4. **-x** : The user neither is current user nor in the group of user (other) (Execute)
+
+```bash
 -rw-rw-r-- 1 asifkhan asifkhan 66 Sep 10 23:22 app.js
 ```
 
@@ -21,15 +30,6 @@
 `rw-` : Group of three characters (Read and write)
 `rw-` : Group of three characters (Read and write)
 `r--` : Group of three characters (Read)
-
-```bash
--rwxrwxr-x 1 asifkhan asifkhan 25 Sep 10 23:27 index.ts
-```
-
-1. **-** : file
-2. **rwx** : (Read, Write, and Execute)
-3. **rwx** : (Read, Write, and Execute)
-4. **-x** : (Execute)
 
 ![File Permissions](./file-permission.png)
 
