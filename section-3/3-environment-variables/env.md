@@ -126,7 +126,7 @@ A **file system** is the program so an **operating system** uses it to **organiz
 
 > It's running directly inside the core software known as the **kernal**.
 
-![File System](../../../../Danger-Zone/ChaiCode/1.jpg)
+![File System](./file-system-location.jpg)
 
 At its core, the **file system** acts like a **digital filing cabinet**. It keeps track of:
 
@@ -169,6 +169,8 @@ There are two types of executable files:- **script** and **binary** executable f
 - **Data Files (.txt, .jpg, .pdf)**: These are passive and require a separate application to interpret their content.
 
 - **Script Files (.bat, .py, .sh)**: These require an interpreter (like Python or Bash) to translate commands into machine code, rather than being directly understood by the CPU.
+
+![Script files extension](./exe-files.png)
 
 - **Executable Files**: These contain low-level binary instructions the CPU can act upon immediately.
 
