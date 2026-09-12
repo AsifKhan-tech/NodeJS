@@ -6,6 +6,10 @@
 - Write
 - Execute
 
+1. `r` : Read
+2. `w` : Write
+3. `x` : Execute
+
 > When create a directory, the computer **allocates** `4KB` space in memory.
 
 > When we create an user in `UNIX` **operating system**, along with that a group is also created.
@@ -33,14 +37,30 @@
 
 ![File Permissions](./file-permission.png)
 
-**Grant permission to the file / directory**
+`chmod +x` : **Give permission to the file / directory to all**
+
+1. **_Owner(Current User)_**
+2. **_Group_**
+3. **_Other_**
 
 `chmod +x app.js`
 
-> `+` : To grant permission `x` : execute permission
+1. `+` : Grant
+2. `x` : Execute
+
+> `+x` : Grant execute permission
 
 **Remove permission to the file / directory**
 
 `chmod -w file.sh`
 
-> `-` : To remove permission `w` : write permission
+1. `-` : Remove
+2. `w` : write permission
+
+> `-w` : Remove write permission
+
+`chmod` : command removes the **read**, **write**, and **execute** permissions of `Owner`, `Group`, and `Other`.
+
+- `chmod` : command grants the **write** permission to `Owner`, and `Group`.
+- `chmod` : command grants the **read** permission to `Owner`, `Group`, and `Other`.
+- `chmod` : command grants the **execute** permission to `Owner`, `Group`, and `Other`.
