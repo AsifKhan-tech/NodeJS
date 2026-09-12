@@ -45,8 +45,8 @@
 
 `chmod +x app.js`
 
-1. `+` : Grant
-2. `x` : Execute
+- `+` : Grant
+- `x` : Execute
 
 > `+x` : Grant execute permission
 
@@ -54,8 +54,8 @@
 
 `chmod -w file.sh`
 
-1. `-` : Remove
-2. `w` : write permission
+- `-` : Remove
+- `w` : write permission
 
 > `-w` : Remove write permission
 
@@ -64,3 +64,49 @@
 - `chmod` : command grants the **write** permission to `Owner`, and `Group`.
 - `chmod` : command grants the **read** permission to `Owner`, `Group`, and `Other`.
 - `chmod` : command grants the **execute** permission to `Owner`, `Group`, and `Other`.
+
+> **If there is a need to give write permission to Other**?
+
+**There is no by default execute permission to the file**.
+
+We cann't **run** script executable file without giving the **path** of the file becuase the **terminal** is starts seraching for **built-in** command in the system.
+
+- There is a case to **remove Other's** file **execution** permission.
+
+```bash
+chmod o-x app.js
+```
+
+- There is a case to **remove Group's** file **execution** permission.
+
+```bash
+chmod g-x app.js
+```
+
+- There is a case to **remove Owner's** file **execution** permission.
+
+```bash
+chmod -x app.js
+```
+
+> Also, remove the **read** and **write** file permissions individually like this.
+
+- There is a case to **Grant Owner's** file **execution** permission.
+
+```bash
+chmod u+x app.js
+```
+
+- There is a case to **Grant Group's**, **Other's** file **write** permission.
+
+```bash
+chmod g+w,o+w app.js
+```
+
+- There is a case to **drop** all permissions to the **User**.
+
+```bash
+chmod u-w,u-r,u-x app.js
+```
+
+> Something can do like it with the `Group` and `Other`.
