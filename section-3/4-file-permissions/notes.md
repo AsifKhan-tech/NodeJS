@@ -132,3 +132,10 @@ chmod 666 app.js
 - For **Owner** : 6 = read (4) + write (2)
 - For **Group** : 6 = read (4) + write (2)
 - For **Other** : 6 = read (4) + write (2)
+
+**Git Permissions**
+
+- **100644** : Normal file with non-executable permission
+- **100755** : Normal file with executable permission
+- **120000** : Symbolic link
+- **040000** : Directory
