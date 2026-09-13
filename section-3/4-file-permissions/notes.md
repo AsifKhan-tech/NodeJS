@@ -110,3 +110,9 @@ chmod u-w,u-r,u-x app.js
 ```
 
 > Something can do like it with the `Group` and `Other`.
+
+How to give permissions in one go to the `User`, `Group`, and `Other`.
+
+```bash
+chmod u=rwx,g=rx,o=rx new.sh
+```
