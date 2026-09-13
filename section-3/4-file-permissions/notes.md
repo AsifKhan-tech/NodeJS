@@ -116,3 +116,19 @@ How to give permissions in one go to the `User`, `Group`, and `Other`.
 ```bash
 chmod u=rwx,g=rx,o=rx new.sh
 ```
+
+**To see the numeric value of file permissions**.
+
+```bash
+stat -c "%A %a %n" app.js
+```
+
+**How to grant or remove permissions using numbers**.
+
+```bash
+chmod 666 app.js
+```
+
+- For **Owner** : 6 = read (4) + write (2)
+- For **Group** : 6 = read (4) + write (2)
+- For **Other** : 6 = read (4) + write (2)
