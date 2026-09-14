@@ -139,3 +139,19 @@ chmod 666 app.js
 - **100755** : Normal file with executable permission
 - **120000** : Symbolic link
 - **040000** : Directory
+
+---
+
+> How command get execute in terminal?
+
+- **Commands** are instructions given by the **user** to the **Operating System** via **Command Line Interface (CLI)** or **Terminal** to perform certain **task**.
+
+There are several types of commands.
+
+1. Alias : Firstly bash checks if the command matches any defined aliases.
+
+```bash
+man pwd
+```
+
+`man <command>` : If you don't know **how to use the certain command**, run this to get manual.
