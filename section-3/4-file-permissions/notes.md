@@ -154,14 +154,30 @@ chmod 666 app.js
 - **a shell functon**
 - **an alias**
 
-```bash
-type
-```
+### type
 
 - The **`type`** command can figure out the **type** of the command.
 
 ```bash
 type pwd
+```
+
+- **output**
+
+```bash
+pwd is shell builtin
+```
+
+**`which` command tell the location of the _executable_ command**.
+
+```bash
+which pwd
+```
+
+**Output**
+
+```bash
+/usr/bin/pwd
 ```
 
 - **Create function as a command in bash file**.
@@ -178,6 +194,12 @@ cd () {
 source ~/.bashrc
 ```
 
+```bash
+man pwd
+```
+
+`man <command>` : If you don't know **how to use the certain command**, run this to get manual.
+
 1. **Alias** : Firstly **bash** checks if the command **matches** any defined aliases.
 
 2. **Functions** : Next, it checks if the commands **matches** any defined **shell** functions.
@@ -187,21 +209,3 @@ source ~/.bashrc
 4. **Hash Table** : **Bash** checks its **hash table** of previously looked up executables to quickly locate executables.
 
 5. **Executable files** : Finally, it searches through the directories listed in `PATH` **environment variable**, in order they appear to find an **executable** file matching the command name.
-
-**`which` command tell the location of the _executable_ command**.
-
-```bash
-which pwd
-```
-
-**Output**
-
-```bash
-/usr/bin/pwd
-```
-
-```bash
-man pwd
-```
-
-`man <command>` : If you don't know **how to use the certain command**, run this to get manual.
