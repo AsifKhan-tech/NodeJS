@@ -142,11 +142,41 @@ chmod 666 app.js
 
 ---
 
-> How command get execute in terminal?
+> **How command get execute in terminal**?
 
 - **Commands** are instructions given by the **user** to the **Operating System** via **Command Line Interface (CLI)** or **Terminal** to perform certain **task**.
 
-There are several types of commands.
+**There are several types of commands**.
+**A command can be**
+
+- **an executable**
+- **a shell built-in program**
+- **a shell functon**
+- **an alias**
+
+```bash
+type
+```
+
+- The **`type`** command can figure out the **type** of the command.
+
+```bash
+type pwd
+```
+
+- **Create function as a command in bash file**.
+
+```bash
+cd () {
+    echo This is the example of function.
+}
+```
+
+- **How to availabe this function**.
+
+```bash
+source ~/.bashrc
+```
 
 1. **Alias** : Firstly **bash** checks if the command **matches** any defined aliases.
 
@@ -156,9 +186,9 @@ There are several types of commands.
 
 4. **Hash Table** : **Bash** checks its **hash table** of previously looked up executables to quickly locate executables.
 
-5. **Executable files** : Finally, it searches through the directories listed in `PATH` **environment variable**, in order they appear to find an executable file matching the command name.
+5. **Executable files** : Finally, it searches through the directories listed in `PATH` **environment variable**, in order they appear to find an **executable** file matching the command name.
 
-**`which` command tell the location of the command**.
+**`which` command tell the location of the _executable_ command**.
 
 ```bash
 which pwd
