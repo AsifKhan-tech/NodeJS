@@ -158,6 +158,18 @@ There are several types of commands.
 
 5. **Executable files** : Finally, it searches through the directories listed in `PATH` **environment variable**, in order they appear to find an executable file matching the command name.
 
+**`which` command tell the location of the command**.
+
+```bash
+which pwd
+```
+
+**Output**
+
+```bash
+/usr/bin/pwd
+```
+
 ```bash
 man pwd
 ```
