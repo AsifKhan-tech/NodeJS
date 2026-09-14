@@ -168,6 +168,8 @@ type pwd
 pwd is shell builtin
 ```
 
+- **if the command is _binary_, the `type` command gives its _path_**.
+
 **`which` command tell the location of the _executable_ command**.
 
 ```bash
@@ -200,6 +202,8 @@ man pwd
 
 `man <command>` : If you don't know **how to use the certain command**, run this to get manual.
 
+## Order of search
+
 1. **Alias** : Firstly **bash** checks if the command **matches** any defined aliases.
 
 2. **Functions** : Next, it checks if the commands **matches** any defined **shell** functions.
@@ -209,3 +213,21 @@ man pwd
 4. **Hash Table** : **Bash** checks its **hash table** of previously looked up executables to quickly locate executables.
 
 5. **Executable files** : Finally, it searches through the directories listed in `PATH` **environment variable**, in order they appear to find an **executable** file matching the command name.
+
+---
+
+### How to transform the output
+
+```bash
+echo $PATH
+```
+
+![Without Transform](./Path.png)
+
+## Transform
+
+```bash
+echo $PATH | tr ":" "\n"
+```
+
+![With Transform](./transform.png)
