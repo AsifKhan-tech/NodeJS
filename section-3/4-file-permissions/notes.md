@@ -148,7 +148,11 @@ chmod 666 app.js
 
 There are several types of commands.
 
-1. Alias : Firstly bash checks if the command matches any defined aliases.
+1. **Alias** : Firstly **bash** checks if the command **matches** any defined aliases.
+
+2. **Functions** : Next, it checks if the commands **matches** any defined **shell** functions.
+
+3. **Built-in Command** : Then, **Bash** checks if the command is a built-in **shell** command like (`cd`, `echo`, `pwd` etc).
 
 ```bash
 man pwd
