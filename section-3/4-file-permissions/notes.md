@@ -152,7 +152,11 @@ There are several types of commands.
 
 2. **Functions** : Next, it checks if the commands **matches** any defined **shell** functions.
 
-3. **Built-in Command** : Then, **Bash** checks if the command is a built-in **shell** command like (`cd`, `echo`, `pwd` etc).
+3. **Built-ins** : Then, **Bash** checks if the command is a built-in **shell** command like (`cd`, `echo`, `pwd` etc).
+
+4. **Hash Table** : **Bash** checks its **hash table** of previously looked up executables to quickly locate executables.
+
+5. **Executable files** : Finally, it searches through the directories listed in `PATH` **environment variable**, in order they appear to find an executable file matching the command name.
 
 ```bash
 man pwd
