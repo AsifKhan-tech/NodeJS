@@ -20,3 +20,20 @@ process.version;
 
 //processor architecture
 process.arch;
+
+// process methods
+
+//current working directory
+process.cwd();
+
+//change directory
+process.chdir("./src");
+
+//Memory usage
+process.memoryUsage();
+
+//process uptime
+process.uptime();
+
+//exiting process
+process.exit(0);
