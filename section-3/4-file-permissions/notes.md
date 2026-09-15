@@ -212,7 +212,13 @@ man pwd
 
 4. **Hash Table** : **Bash** checks its **hash table** of previously **looked up / cached** executables to quickly locate executables.
 
-5. **Executable files** : Finally, it searches through the directories listed in `PATH` **environment variable**, in order they appear to find an **executable** file matching the command name.
+```bash
+hash
+```
+
+> Show the cached paths
+
+5.  **Executable files** : Finally, it searches through the directories listed in `PATH` **environment variable**, in order they appear to find an **executable** file matching the command name.
 
 ![Order of search](./order.png)
 
