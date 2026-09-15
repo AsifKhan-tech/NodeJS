@@ -210,7 +210,7 @@ man pwd
 
 3. **Built-ins** : Then, **Bash** checks if the command is a built-in **shell** command like (`cd`, `echo`, `pwd` etc).
 
-4. **Hash Table** : **Bash** checks its **hash table** of previously looked up executables to quickly locate executables.
+4. **Hash Table** : **Bash** checks its **hash table** of previously **looked up / cached** executables to quickly locate executables.
 
 5. **Executable files** : Finally, it searches through the directories listed in `PATH` **environment variable**, in order they appear to find an **executable** file matching the command name.
 
