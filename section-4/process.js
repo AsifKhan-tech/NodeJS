@@ -14,3 +14,9 @@ process.ppid;
 
 //Operating system platform
 process.platform;
+
+//NodeJS and dependencies version
+process.version;
+
+//processor architecture
+process.arch;
