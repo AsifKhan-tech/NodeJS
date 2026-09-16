@@ -216,6 +216,12 @@ man pwd
 hash
 ```
 
+![Order of command execution](./order-cmd-exec.png)
+
+### More precise order of command execution
+
+![Precise order of command execution](./precise-order-exec-cmd.png)
+
 > Show the cached paths
 
 5.  **Executable files** : Finally, it searches through the directories listed in `PATH` **environment variable**, in order they appear to find an **executable** file matching the command name.
