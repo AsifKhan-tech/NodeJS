@@ -216,7 +216,7 @@ man pwd
 hash
 ```
 
-![Order of command execution](./order-cmd-exec.png)
+![Order of command execution and alias expansion](./order-of-cmd-exec-with-alias-expansion.png)
 
 ### More precise order of command execution
 
