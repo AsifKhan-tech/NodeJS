@@ -8,4 +8,6 @@ function product(...nums) {
   return product;
 }
 
+console.log(`Running product.js file`);
+
 module.exports = product;

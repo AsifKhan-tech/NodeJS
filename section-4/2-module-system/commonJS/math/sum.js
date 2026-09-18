@@ -7,4 +7,6 @@ function sum(...nums) {
   return sum;
 }
 
-module.exports = sum;
+console.log(`Running sum.js file`);
+// module.exports = sum;
+module.exports = ` string`;
