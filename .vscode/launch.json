@@ -11,5 +11,6 @@
       "skipFiles": ["<node_internals>/**"],
       "program": "${file}"
     }
-  ]
+  ],
+  "runTimeArgs": ["--require", "${workspaceFolder}\\math.js"]
 }
