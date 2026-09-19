@@ -1,7 +1,11 @@
 // const { square, cube, power } = require("./modules");
-
 const math = require("./modules");
-console.log("app.js: ", math);
+console.log(math);
+
+// const { square, cube, power } = require("./modules");
+// console.log("app.js: ", square(2));
+// console.log("app.js: ", cube(2));
+// console.log("app.js: ", power(2, 3));
 /**
  * const { square, cube, power } = {
   square,
@@ -30,3 +34,22 @@ console.log("Product: ", product(1, 2, 3, 4, 5));
  * If doesn't find the file by giving path, it throws an error.
  */
 // console.log(typeof require);
+
+const user = {
+  name: "Ayan",
+  age: 15,
+  address: {
+    city: "Noida",
+    state: "Uttar Pradesh",
+  },
+  hobbies: ["Vollyball", "Music", "Travelling"],
+};
+
+let address = user.address; //address variable referce to the nested address object of the user object.
+// console.log(address === user.address);
+
+// address.PINCODE = 123456;
+// address.country = "India";
+address = { PINCODE: 123456, country: "India" };
+// console.log(address);
+// console.log(user.address);

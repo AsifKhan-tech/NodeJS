@@ -10,9 +10,21 @@ function power(value, exponent) {
   return Math.pow(value, exponent);
 }
 
-module.exports.square = square;
-module.exports.cube = cube;
-module.exports.power = power;
+/**
+ * exports is the nested object of the module object exports will reference / point to module object.
+ * That's why when we use to export the module, it can either be used module.exports or only exports both are same.
+ */
+// const send = module.exports;
+exports = {
+  square,
+  cube,
+  power,
+};
+
+console.log(module);
+// exports.square = square;
+// exports.cube = cube;
+// exports.power = power;
 
 // module.exports = {
 //   square,
@@ -20,3 +32,5 @@ module.exports.power = power;
 //   power,
 // };
 // console.log(module.exports);
+
+// console.log(module.exports === exports);
