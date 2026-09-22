@@ -15,3 +15,4 @@ import timer from "./timer.js";
 //file extension mandatiry
 //we can not load any file except only JS and mjs
 //we can use mjs file extension in module JS
+//if we want to use ESM in our project, we will have to set type : "module" in package.json file
