@@ -6,3 +6,5 @@
  */
 
 console.log(import.meta);
+//It has several properties:- it provides url property ans resolve method in the browser
+//url: this is the url where the module is load.
