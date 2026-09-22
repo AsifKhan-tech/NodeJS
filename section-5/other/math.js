@@ -1,3 +1,3 @@
 export const num = 1;
 const { filename, dirname } = import.meta;
-console.log(filename, dirname);
+console.log(filename, ":", dirname);
