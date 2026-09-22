@@ -1,3 +1,6 @@
+//if the project is both module systems (common JS & ESM), it's convention
+
+//we can use cjs file extension in common JS
 //Common JS
 // const timer = require("./timer.js");
 //require function itself searches the file in the filesystem and reads it. JS Main thread will busy do it
@@ -11,3 +14,4 @@ import timer from "./timer.js";
 //These load Asynchronously: As JS engine reads the files asynchronously while if we execute the file, we will JS for it that is synchronously
 //file extension mandatiry
 //we can not load any file except only JS and mjs
+//we can use mjs file extension in module JS
