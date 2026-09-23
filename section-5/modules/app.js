@@ -9,6 +9,7 @@
 //if we give full path of the file then we can load any file using cjs
 // this keyword in common js points to module.exports' value by default
 //require doesn't "hoist".
+//only one value can exported in cjs
 
 //ESM
 import timer from "./timer.js";
@@ -20,3 +21,4 @@ import timer from "./timer.js";
 //if we want to use ESM in our project, we will have to set type : "module" in package.json file
 // this keyword in module js is undefined
 //import statement has been "hoist".
+//multiple values can exported in mjs
