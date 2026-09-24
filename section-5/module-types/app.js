@@ -6,6 +6,7 @@ import http from "node:http";
 import https from "node:https";
 //user module
 import { num } from "./math.js";
+console.log(num);
 
 //third-party modules
 import dotenv from "dotenv";
