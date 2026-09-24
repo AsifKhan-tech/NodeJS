@@ -4,8 +4,10 @@ import net from "node:net";
 import dgram from "node:dgram";
 import http from "node:http";
 import https from "node:https";
+
+import { num } from "maths";
 //user module
-import { num } from "./math.js";
+// import { num } from "math";
 console.log(num);
 
 //third-party modules
