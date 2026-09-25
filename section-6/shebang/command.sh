@@ -2,4 +2,4 @@
 
 # npm and npx both use the shebang
 
-#!/bin/env bash
+ls -l
