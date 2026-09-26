@@ -6,6 +6,8 @@
  * npx <package_name>
  * NPX Searching steps:
  * Firstly search package.json file in current working directory and see that what is the value of "name" key, if name key is find, after it searches for "bin" key it means that which file has to execute. It executes file directly without using node. npx <file_name> as defined in package.json
+ *
+ * Second step it searches .bin folder inside it hello named file that all inside in node_modules folder in current working directory
  */
 
 console.log("NPX working...");
