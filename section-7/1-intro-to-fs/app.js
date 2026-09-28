@@ -1,4 +1,5 @@
-import * as fs from "node:fs";
+// import * as fs from "node:fs";
+import * as fs from "node:fs/promises";
 
 // const HTMLcontent = fs.readFileSync("./index.html");
 // console.log(HTMLcontent);
@@ -20,10 +21,10 @@ import * as fs from "node:fs";
  * return the content of the given file in Buffer, if encoding option is defined, then this function returns string
  */
 
-fs.readFile("./index.html", "utf-8", (err, data) => {
-  if (err) throw err;
-  console.log(data);
-});
+// fs.readFile("./index.html", "utf-8", (err, data) => {
+//   if (err) throw err;
+//   console.log(data);
+// });
 
 /**
  * *********readFile************
@@ -32,3 +33,6 @@ fs.readFile("./index.html", "utf-8", (err, data) => {
  * If a file descriptor is provided, the underlying file will _not_ be closed automatically.
  *
  */
+
+const returnVal = await fs.readFile("./index.html", { encoding: "utf-8" });
+console.log(returnVal);
