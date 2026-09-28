@@ -27,7 +27,7 @@ import * as fs from "node:fs/promises";
 // });
 
 /**
- * *********readFile************
+ * *********readFile method without fs/promises************
  * Asynchronously reads the entire contents of a file.
  * A path to a file. If a URL is provided, it must use the `file:` protocol.
  * If a file descriptor is provided, the underlying file will _not_ be closed automatically.
